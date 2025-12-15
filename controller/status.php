@@ -1,0 +1,1 @@
+<?php include  "../koneksi/koneksi.php";$data = array();mysqli_set_charset($koneksi, 'utf8');$query = mysqli_query($koneksi, "SELECT * FROM temp_transaksi where sebelum='call' order by time DESC");while($row = mysqli_fetch_assoc($query)) {	$data= $row;}			$json = json_encode($data);echo $json;?>

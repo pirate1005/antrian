@@ -1,0 +1,1 @@
+<?phpinclude  "../koneksi/koneksi.php";     $sql = mysqli_query($koneksi,"SELECT nomor_antrian FROM temp_transaksi order by time DESC");      $r    = mysqli_fetch_array($sql);      echo substr($r['nomor_antrian'],0,1);?>
